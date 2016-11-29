@@ -5,17 +5,17 @@ Ext.define("InAcc.view.west.WestContainer", {
 	xtype: "inacc-westcontainer",
 	
 	requires: ["InAcc.view.west.LayerTab",
-	           "InAcc.view.west.SearchTab"],
+	           "InAcc.view.west.SearchTab",
+	           "InAcc.view.west.search.SearchAddressResult"],
 	
 	tabBarPosition: 'top',
 
     defaults: {
         styleHtmlContent: true
     },
-    
     collapsible: true,
-    
-    width: 300,
+    collapseDirection: 'left',
+    width: 320,
 
     items: [
         {
@@ -30,6 +30,13 @@ Ext.define("InAcc.view.west.WestContainer", {
             title: '검색',
             items: [{
             	xtype: "inacc-searchtab"
+            },{
+            	xtype:"container",
+            	height:150
+            },{
+            	xtype:"inacc-west-search-SearchAddressResult",
+            	id:"SearchAddressResult",
+            	hidden:true
             }]
         }
     ],
