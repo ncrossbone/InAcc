@@ -86,6 +86,7 @@ Ext.define("InAcc.view.west.SearchTab", {
 		handler: function() {
 			var searchAddressResult = Ext.getCmp("SearchAddressResult");
 			searchAddressResult.setVisible(true);
+			
 		}
 	},{
 		xtype: 'container',

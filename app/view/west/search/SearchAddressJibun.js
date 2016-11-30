@@ -15,7 +15,6 @@ Ext.define("InAcc.view.west.search.SearchAddressJibun", {
     },{
     	xtype:"textfield",
     	fieldLabel: '지번',
-    	width: 200,
-    	disabled:true
+    	width: 200
     }]
 });
