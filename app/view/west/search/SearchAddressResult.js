@@ -19,10 +19,6 @@ Ext.define("InAcc.view.west.search.SearchAddressResult", {
 			hideHeaders: false,
 			title:'검색결과',
 			selType: 'checkboxmodel',
-			store: [{'NAME': '단위유역','TITLE': '가평A'},
-		         	{'NAME': '특대유역','TITLE': '가평A1'},
-		         	{'NAME': '중권역','TITLE': '의암댐'},
-		         	{'NAME': '환경기초시설','TITLE': '가평하수종말처리장'}],
 		    columns:[{
 		    	align:'center',
 		    	dataIndex:'NAME',

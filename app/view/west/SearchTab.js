@@ -87,6 +87,10 @@ Ext.define("InAcc.view.west.SearchTab", {
 			var searchAddressResult = Ext.getCmp("SearchAddressResult");
 			searchAddressResult.setVisible(true);
 			
+			
+			//검색결과 
+			SearchResult();
+			
 		}
 	},{
 		xtype: 'container',

@@ -14,6 +14,7 @@ Ext.define("InAcc.view.west.search.SearchAddressJibun", {
     	width:50
     },{
     	xtype:"textfield",
+    	id : "cmd_jibun",
     	fieldLabel: '지번',
     	width: 200
     }]
