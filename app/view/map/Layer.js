@@ -12,7 +12,13 @@ Ext.define('InAcc.view.map.Layer', {
 		
 		var coreMap = Ext.getCmp("_mapDiv_");
 
-		// setup single tiled layer
+		var layerIdx = this.layers.map(function(layer){
+			return layer.id;
+		}).indexOf(id);
+		
+		
+		if(layerIdx==-1){
+		
 		var layer = new OpenLayers.Layer.WMS("tmdl:10km - Untiled", "http://112.217.167.123:38080/geoserver/tmdl/wms",
 				{
 			"LAYERS": id,
@@ -29,30 +35,28 @@ Ext.define('InAcc.view.map.Layer', {
 					yx : {'EPSG:4326' : true}
 				} 
 		);
-		console.info(layer);
 		
 		coreMap.map.addLayers([layer]);
 		
 		layer.setVisibility(true);
         
+		
         var layerObj = {id: id, layer: layer};
         this.layers.push(layerObj);
         
-       // console.info(this.layers);
-		
-		/*var layerIdx = this.layers.map(function(layer){
-			return layer.id;
-		}).indexOf(record.id);
-		
-		this.layers[layerIdx].layer.setVisibility(false);*/
+		}else{
+			
+			this.layers[layerIdx].layer.setVisibility(true);
+			
+		}
 	},
 	layerOff: function(id){
+		
 		var layerIdx = this.layers.map(function(layer){
-			//console.info(layer.id);
 			return layer.id;
 		}).indexOf(id);
 		
 		this.layers[layerIdx].layer.setVisibility(false);
-		this.layers[layerIdx] = null;
+		//this.layers[layerIdx].layer = null;
 	}
 });
