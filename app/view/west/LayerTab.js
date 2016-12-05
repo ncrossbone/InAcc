@@ -28,7 +28,7 @@ Ext.define("InAcc.view.west.LayerTab", {
 			}*/
 			checkchange:function(node){
 				var dLayer = Ext.getCmp("Layer");
-				
+
 				if(node.childNodes.length!=0){
 					for(var i = 0; i < node.childNodes.length; i++){
 						if(node.data.checked==false){
@@ -38,6 +38,12 @@ Ext.define("InAcc.view.west.LayerTab", {
 							node.childNodes[i].set('checked',true);
 							dLayer.layerOn(node.childNodes[i].id);
 						}
+					}
+				}else{
+					if(node.data.checked==false){
+						dLayer.layerOff(node.id);
+					}else{
+						dLayer.layerOn(node.id);
 					}
 				}
 			}
