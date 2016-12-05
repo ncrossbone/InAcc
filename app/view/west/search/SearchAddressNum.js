@@ -14,8 +14,8 @@ Ext.define("InAcc.view.west.search.SearchAddressNum", {
     	width:50
     },{
     	xtype:"textfield",
+    	id: "cmd_doro_num",
     	fieldLabel: '건물번호',
-    	width: 200,
-    	disabled:true
+    	width: 200
     }]
 });

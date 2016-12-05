@@ -3,6 +3,7 @@ Ext.define("InAcc.view.west.search.SearchAddressResult", {
 	extend: "Ext.panel.Panel",
 	
 	xtype: "inacc-west-search-SearchAddressResult",
+	
 
     layout :{
     	type:"vbox"
@@ -15,18 +16,17 @@ Ext.define("InAcc.view.west.search.SearchAddressResult", {
 		height: '100%',
 		items:[{
 			xtype: 'grid',
-			columnLines: true,
-			hideHeaders: false,
+			id: 'resultGrid',
+			plugins: ['gridfilters'],
 			title:'검색결과',
-			selType: 'checkboxmodel',
-		    columns:[{
+			columns:[{
 		    	align:'center',
-		    	dataIndex:'NAME',
+		    	dataIndex:'TITLE',
 		    	text:'분류',
 				width: 120
 		    },{
 		    	align:'center',
-		    	dataIndex:'TITLE',
+		    	dataIndex:'NAME',
 		    	text:'명칭',
 				width: 120
 		    }]
