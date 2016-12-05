@@ -14,9 +14,24 @@ Ext.define("InAcc.view.west.search.SearchAddressDong", {
     	width:50
     },{
     	xtype:"combo",
+    	id: "cmd_dong",
     	fieldLabel:'읍면동',
     	width: 200,
+    	displayField: 'name',
+		valueField: 'id',
     	editable: false,
-    	disabled:true
+    	listeners:{
+    		select: function(){
+    			var cmd_ri = Ext.getCmp("cmd_ri");
+    			
+    			Ext.getCmp("cmd_ri").setValue("");
+    			
+    			var riStore = Ext.create("InAcc.store.west.Search_Ri",{
+    				layerType: '2ri'
+    			});
+    			riStore.load();
+    			cmd_ri.setStore(riStore);
+    		}
+    	}
     }]
 });

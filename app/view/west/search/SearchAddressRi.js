@@ -15,8 +15,12 @@ Ext.define("InAcc.view.west.search.SearchAddressRi", {
     },{
     	xtype:"combo",
     	fieldLabel:'동리',
+    	id: "cmd_ri",
     	width: 200,
     	editable: false,
-    	disabled:true
+    	displayField: 'name',
+		valueField: 'id',
+    	width: 200,
+    	editable: false
     }]
 });
