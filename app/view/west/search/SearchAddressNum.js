@@ -11,11 +11,11 @@ Ext.define("InAcc.view.west.search.SearchAddressNum", {
     height: "100%",
     items:[{
     	xtype:"container",
-    	width:50
+    	width:30
     },{
     	xtype:"textfield",
     	id: "cmd_doro_num",
     	fieldLabel: '건물번호',
-    	width: 200
+    	width: 250
     }]
 });

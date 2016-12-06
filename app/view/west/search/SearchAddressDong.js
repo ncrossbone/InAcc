@@ -11,12 +11,12 @@ Ext.define("InAcc.view.west.search.SearchAddressDong", {
     height: "100%",
     items:[{
     	xtype:"container",
-    	width:50
+    	width:30
     },{
     	xtype:"combo",
     	id: "cmd_dong",
     	fieldLabel:'읍면동',
-    	width: 200,
+    	width: 250,
     	displayField: 'name',
 		valueField: 'id',
     	editable: false,

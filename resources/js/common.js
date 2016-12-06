@@ -225,7 +225,7 @@ var coreMap = Ext.getCmp("_mapDiv_");
 		format: 'image/png'
 			},         
 			{
-				singleTile: false,
+				singleTile: true,
 				visibility : false,
 				legend: true,
 				ratio: 1, 

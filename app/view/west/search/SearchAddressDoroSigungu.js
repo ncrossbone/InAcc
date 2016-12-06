@@ -11,15 +11,14 @@ Ext.define("InAcc.view.west.search.SearchAddressDoroSigungu", {
     height: "100%",
     items:[{
     	xtype:"container",
-    	width:50
+    	width:30
     },{
     	xtype:"combo",
     	id: "cmd_doro_sigungu",
     	fieldLabel:"시군구",
-    	width: 200,
+    	width: 250,
     	displayField: 'name',
 		valueField: 'id',
-    	width: 200,
     	editable: false
     }]
 });

@@ -11,11 +11,11 @@ Ext.define("InAcc.view.west.search.SearchAddressJibun", {
     height: "100%",
     items:[{
     	xtype:"container",
-    	width:50
+    	width:30
     },{
     	xtype:"textfield",
     	id : "cmd_jibun",
     	fieldLabel: '지번',
-    	width: 200
+    	width: 250
     }]
 });

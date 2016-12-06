@@ -27,7 +27,7 @@ Ext.define('InAcc.view.map.Layer', {
 			format: 'image/png'
 				},         
 				{
-					singleTile: false,
+					singleTile: true,
 					visibility : false,
 					legend: true,
 					ratio: 1, 

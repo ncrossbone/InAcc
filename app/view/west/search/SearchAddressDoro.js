@@ -11,11 +11,11 @@ Ext.define("InAcc.view.west.search.SearchAddressDoro", {
     height: "100%",
     items:[{
     	xtype:"container",
-    	width:50
+    	width:30
     },{
     	xtype:"textfield",
     	id: "cmd_doro",
     	fieldLabel: '도로명',
-    	width: 200
+    	width: 250
     }]
 });

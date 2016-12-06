@@ -11,7 +11,7 @@ Ext.define("InAcc.view.west.search.SearchAddressSido", {
     height: "100%",
     items:[{
     	xtype:"container",
-    	width:50
+    	width:30
     },{
     	id: 'cmd_sido',
     	xtype:"combo",
@@ -19,7 +19,7 @@ Ext.define("InAcc.view.west.search.SearchAddressSido", {
     	store: Ext.create('InAcc.store.west.Search_Sido',{
     		layerType: '2sido'
     	}),
-    	width: 200,
+    	width: 250,
     	displayField: 'name',
 		valueField: 'id',
     	editable: false,

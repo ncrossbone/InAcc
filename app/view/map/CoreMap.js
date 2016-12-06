@@ -29,7 +29,6 @@ Ext.define('InAcc.view.map.CoreMap', {
                     //restrictedExtent : new OpenLayers.Bounds(126, 20, 129, 40)
                     //maxExtent: new OpenLayers.Bounds(4038820.8461085, 3309091.461517964, 15889117.943692, 5341704.9176768325)
                     controls : [
-                        new OpenLayers.Control.PanZoomBar(),
                         new OpenLayers.Control.Navigation()
                      ],
                     };
@@ -50,10 +49,10 @@ Ext.define('InAcc.view.map.CoreMap', {
 		var vBase = new vworld.Layers.Base('VBASE');
 		//console.info(vBase);
         if (vBase != null){me.map.addLayer(vBase);}
-        me.map.setCenter(new OpenLayers.LonLat(128.7086, 35.7769).transform(me.map.displayProjection, me.map.projection), 8);
+        me.map.setCenter(new OpenLayers.LonLat(14193858.137184,4328058.5610993), 8);
         
         me.map.events.register("moveend", me.map, function(evt){
-            //console.info(me.map.getExtent());
+            console.info(me.map.getCenter());
        });
 	}
 });
