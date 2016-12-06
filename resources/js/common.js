@@ -38,18 +38,23 @@ SearchResult = function(searchType){
 				
 				//단위유역
 				if(tmUnitCd.substr(0,1) != "-"){
-					coreMap.resultStore.push({TITLE:"단위유역", NAME:resultStore.data.items[0].data.TM_UNIT_NM}); //데이터가 있을시 전역변수 벼열 설정
+					//coreMap.resultStore.push({TITLE:"단위유역", NAME:resultStore.data.items[0].data.TM_UNIT_NM}); //데이터가 있을시 전역변수 벼열 설정
 					if(tmUnitCd.substr(0,1) == "J"){//진위천
 						AddLayer(tmUnitCd,"jinAdan","TM_UNIT_CD");
+						coreMap.resultStore.push({TITLE:"단위유역", NAME:resultStore.data.items[0].data.TM_UNIT_NM, LAYER: "sch_jinAdan"}); //데이터가 있을시 전역변수 벼열 설정
 					}else if(tmUnitCd.substr(0,1) == "H"){ //한강
 						AddLayer(tmUnitCd,"9hangang","TM_UNIT_CD");
+						coreMap.resultStore.push({TITLE:"단위유역", NAME:resultStore.data.items[0].data.TM_UNIT_NM, LAYER: "sch_9hangang"}); //데이터가 있을시 전역변수 벼열 설정
 						//TmUnitLayer(tmUnitCd,"9hangang");
 					}else if(tmUnitCd.substr(0,1) == "N"){ //낙동강
 						AddLayer(tmUnitCd,"12nak","TM_UNIT_CD");
+						coreMap.resultStore.push({TITLE:"단위유역", NAME:resultStore.data.items[0].data.TM_UNIT_NM, LAYER: "sch_12nak"}); //데이터가 있을시 전역변수 벼열 설정
 					}else if(tmUnitCd.substr(0,1) == "D" || tmUnitCd.substr(0,1) == "K" || tmUnitCd.substr(0,1) == "M"){ //금강
 						AddLayer(tmUnitCd,"10km","TM_UNIT_CD");
+						coreMap.resultStore.push({TITLE:"단위유역", NAME:resultStore.data.items[0].data.TM_UNIT_NM, LAYER: "sch_10km"}); //데이터가 있을시 전역변수 벼열 설정
 					}else if(tmUnitCd.substr(0,1) == "S" || tmUnitCd.substr(0,1) == "T" || tmUnitCd.substr(0,1) == "Y"){ //영산강
 						AddLayer(tmUnitCd,"11yeoung","TM_UNIT_CD");
+						coreMap.resultStore.push({TITLE:"단위유역", NAME:resultStore.data.items[0].data.TM_UNIT_NM, LAYER: "sch_11yeoung"}); //데이터가 있을시 전역변수 벼열 설정
 					}	
 				}
 				
@@ -62,14 +67,16 @@ SearchResult = function(searchType){
 					//coreMap.resultStore.push({TITLE:"특대단위", NAME:resultStore.data.items[0].data.TM_SUNIT_NM});  //데이터가 있을시 전역변수 벼열 설정
 					if(tmSunitCd.substr(0,1) == "H"){//
 						AddLayer(tmSunitCd,"tkdaeyuyeok","TM_SNIT_CD");
+						coreMap.resultStore.push({TITLE:"특대단위", NAME:resultStore.data.items[0].data.TM_SUNIT_NM, LAYER: "sch_tkdaeyuyeok"});  //데이터가 있을시 전역변수 벼열 설정
 					}else if(tmUnitCd.substr(0,1) == "K"){ //
 						AddLayer(tmSunitCd,"kktkdaeyuyeok","TM_SNIT_CD");
+						coreMap.resultStore.push({TITLE:"특대단위", NAME:resultStore.data.items[0].data.TM_SUNIT_NM, LAYER: "sch_kktkdaeyuyeok"});  //데이터가 있을시 전역변수 벼열 설정
 					}	
 				}
 				
 				//중권역
 				if(miaCd.substr(0,1) != "-"){
-					coreMap.resultStore.push({TITLE:"중권역", NAME:resultStore.data.items[0].data.MIA_NM});  //데이터가 있을시 전역변수 벼열 설정
+					coreMap.resultStore.push({TITLE:"중권역", NAME:resultStore.data.items[0].data.MIA_NM, LAYER: "sch_3jong"});  //데이터가 있을시 전역변수 벼열 설정
 					AddLayer(miaCd,"3jong","MW_CODE")
 //					MiaLayer(miaCd,"3jong");
 				}
@@ -77,7 +84,7 @@ SearchResult = function(searchType){
 				
 				//환경기초시설
 				if(envrnBsisFcltyCd.substr(0,1) != "-"){
-					coreMap.resultStore.push({TITLE:"환경기초시설", NAME:resultStore.data.items[0].data.ENVRN_BSIS_FCLTY_NM});  //데이터가 있을시 전역변수 벼열 설정
+					coreMap.resultStore.push({TITLE:"환경기초시설", NAME:resultStore.data.items[0].data.ENVRN_BSIS_FCLTY_NM, LAYER: "sch_17merge"});  //데이터가 있을시 전역변수 벼열 설정
 					AddLayer(envrnBsisFcltyCd,"17merge","EN_BSIS_CD");
 //					EnvrnBsisFcltyLayer(envrnBsisFcltyCd,"17merge");
 				}
@@ -85,7 +92,7 @@ SearchResult = function(searchType){
 				
 				//분뇨처리장
 				if(excrsPrcpltCd.substr(0,1) != "-"){
-					coreMap.resultStore.push({TITLE:"분뇨처리시설", NAME:resultStore.data.items[0].data.EXCRS_PRCPLT_NM});  //데이터가 있을시 전역변수 벼열 설정
+					coreMap.resultStore.push({TITLE:"분뇨처리시설", NAME:resultStore.data.items[0].data.EXCRS_PRCPLT_NM, LAYER: "sch_17boon"});  //데이터가 있을시 전역변수 벼열 설정
 					AddLayer(excrsPrcpltCd,"17boon","EN_BSIS_CD");
 				}
 				

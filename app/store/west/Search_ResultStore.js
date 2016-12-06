@@ -2,7 +2,7 @@ Ext.define('InAcc.store.west.Search_ResultStore', {
 	
 	extend: 'Ext.data.Store',
 	
-	fields: ['TITLE','NAME'],
+	fields: ['TITLE','NAME','LAYER'],
 
 	remoteSort: true,
 	
