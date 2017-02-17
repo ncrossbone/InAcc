@@ -24,12 +24,12 @@ Ext.define("InAcc.view.west.search.SearchAddressResult", {
 		    	align:'center',
 		    	dataIndex:'TITLE',
 		    	text:'분류',
-				width: 120
+				width: 145
 		    },{
 		    	align:'center',
 		    	dataIndex:'NAME',
 		    	text:'명칭',
-				width: 120
+				width: 145
 		    },{
 		    	align:'center',
 		    	dataIndex:'LAYER',

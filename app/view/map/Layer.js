@@ -20,6 +20,7 @@ Ext.define('InAcc.view.map.Layer', {
 		if(layerIdx==-1){
 		
 		var layer = new OpenLayers.Layer.WMS("tmdl:10km - Untiled", "http://112.217.167.123:38080/geoserver/tmdl/wms",
+		//var layer = new OpenLayers.Layer.WMS("tmdl:10km - Untiled", "http://211.114.21.39:80/geoserver/tmdl/wms",
 				{
 			"LAYERS": id,
 			style : {strokeColor:'#ff0000'},

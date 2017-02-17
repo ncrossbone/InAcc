@@ -155,6 +155,7 @@ Center = function(sigungu_cd,layerName){
 	var request = OpenLayers.Request.POST({
 		
 		url: "http://112.217.167.123:38080/geoserver/tmdl/wms",
+//		url: "http://211.114.21.39:80/geoserver/tmdl/wms",
 		params: serviceParam,
 		filter: "",
 	    async: false
@@ -218,6 +219,7 @@ AddLayer = function(code,layerName,colName){
 var coreMap = Ext.getCmp("_mapDiv_");
 	
 	var Layer = new OpenLayers.Layer.WMS("sch_"+layerName, "http://112.217.167.123:38080/geoserver/tmdl/wms",
+//	var Layer = new OpenLayers.Layer.WMS("sch_"+layerName, "http://211.114.21.39:80/geoserver/tmdl/wms",
 			{
 		"LAYERS": layerName,
 		//style : {strokeColor:'#ff0000'},
